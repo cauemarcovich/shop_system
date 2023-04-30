@@ -7,7 +7,8 @@ namespace Character
         [SerializeField] private float speed;
         [SerializeField] private Rigidbody2D rb;
 
-        public MoveDirection _moveDirection;
+        private Vector2 _moveDirection;
+        public Vector2 MoveDirection => _moveDirection;
 
         public void SetMovement(Vector2 movement)
         {
@@ -22,22 +23,14 @@ namespace Character
             
             if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y))
             {
-                if (movement.x > 0f) _moveDirection = MoveDirection.Right;
-                else _moveDirection = MoveDirection.Left;
+                if (movement.x > 0f) _moveDirection = Vector2.right;
+                else _moveDirection = Vector2.left;
             }
             else
             {
-                if (movement.y > 0f) _moveDirection = MoveDirection.Up;
-                else _moveDirection = MoveDirection.Down;
+                if (movement.y > 0f) _moveDirection = Vector2.up;
+                else _moveDirection = Vector2.down;
             }
         }
-    }
-
-    public enum MoveDirection
-    {
-        Up,
-        Right,
-        Down,
-        Left
     }
 }

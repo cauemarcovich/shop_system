@@ -2,7 +2,7 @@ using Scriptable;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Shop
+namespace UI
 {
     public class UITab : MonoBehaviour, IPointerClickHandler
     {

@@ -1,17 +1,26 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Scriptable.Core
 {
     public abstract class BaseRuntimeSet<T> : ScriptableObject
     {
         [SerializeField] private bool isImmutable;
+        [SerializeField] private bool clearOnPlay;
         [SerializeField] private List<T> items = new();
 
         public IEnumerable<T> Items => items;
         public event Action<T> OnValueChanged = _ => { };
+
+        private void OnEnable()
+        {
+            if (!UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
+                return;
+            
+            if(clearOnPlay)
+                items.Clear();
+        }
 
         public T this[int i]
         {

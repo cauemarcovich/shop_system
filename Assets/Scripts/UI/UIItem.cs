@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Shop
+namespace UI
 {
     public class UIItem : MonoBehaviour
     {

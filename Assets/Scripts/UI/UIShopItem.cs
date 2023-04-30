@@ -4,7 +4,7 @@ using Scriptable.Core;
 using TMPro;
 using UnityEngine;
 
-namespace Shop
+namespace UI
 {
     public class UIShopItem : UIItem
     {

@@ -13,7 +13,7 @@ namespace Shop
         private Item _item;
         public Item Item => _item;
 
-        public void SetItemData(Item item)
+        public virtual void SetItemData(Item item)
         {
             _item = item;
             

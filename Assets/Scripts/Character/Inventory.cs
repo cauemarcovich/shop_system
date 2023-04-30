@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField] private IntVariable coinsVariable; 
     [SerializeField] private ItemRuntimeSet inventorySet;
 
     private void OnEnable()

@@ -3,7 +3,7 @@ using Scriptable.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Shop
+namespace UI
 {
     public class UIInventoryItem : UIItem
     {

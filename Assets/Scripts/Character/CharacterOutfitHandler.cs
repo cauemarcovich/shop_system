@@ -4,53 +4,56 @@ using Scriptable;
 using Scriptable.Core;
 using UnityEngine;
 
-public class CharacterOutfitHandler : MonoBehaviour
+namespace Character
 {
-    [SerializeField] private ItemRuntimeSet equippedItemsSet;
-
-    [Header("SpriteRenderer References")]
-    [SerializeField] private SpriteRenderer hairSpriteRenderer;
-    [SerializeField] private SpriteRenderer bodySpriteRenderer;
-    [SerializeField] private SpriteRenderer pantsSpriteRenderer;
-
-    private List<Item> _equippedItems = new() { };
-
-    public void Equip(Item item)
+    public class CharacterOutfitHandler : MonoBehaviour
     {
-        if (_equippedItems.TryGetFirstByItemType(item.Type, out Item equippedItem))
+        [SerializeField] private ItemRuntimeSet equippedItemsSet;
+
+        [Header("SpriteRenderer References")]
+        [SerializeField] private SpriteRenderer hairSpriteRenderer;
+        [SerializeField] private SpriteRenderer bodySpriteRenderer;
+        [SerializeField] private SpriteRenderer pantsSpriteRenderer;
+
+        private List<Item> _equippedItems = new() { };
+
+        public void Equip(Item item)
         {
-            Unequip(equippedItem);
+            if (_equippedItems.TryGetFirstByItemType(item.Type, out Item equippedItem))
+            {
+                Unequip(equippedItem);
+            }
+
+            _equippedItems.Add(item);
+            if (equippedItemsSet != null)
+            {
+                equippedItemsSet.Add(item);
+            }
+
+            UpdateSprites();
         }
 
-        _equippedItems.Add(item);
-        if (equippedItemsSet != null)
+        public void Unequip(Item item)
         {
-            equippedItemsSet.Add(item);
+            _equippedItems.Remove(item);
+            if (equippedItemsSet != null)
+            {
+                equippedItemsSet.Remove(item);
+            }
+
+            UpdateSprites();
         }
 
-        UpdateSprites();
-    }
-
-    public void Unequip(Item item)
-    {
-        _equippedItems.Remove(item);
-        if (equippedItemsSet != null)
+        private void UpdateSprites()
         {
-            equippedItemsSet.Remove(item);
+            _equippedItems.TryGetFirstByItemType(ItemType.Hair, out Item hairEquipped);
+            hairSpriteRenderer.sprite = hairEquipped != null ? hairEquipped.Sprite : null;
+
+            _equippedItems.TryGetFirstByItemType(ItemType.Body, out Item bodyEquipped);
+            bodySpriteRenderer.sprite = bodyEquipped != null ? bodyEquipped.Sprite : null;
+
+            _equippedItems.TryGetFirstByItemType(ItemType.Pants, out Item pantsEquipped);
+            pantsSpriteRenderer.sprite = pantsEquipped != null ? pantsEquipped.Sprite : null;
         }
-
-        UpdateSprites();
-    }
-
-    private void UpdateSprites()
-    {
-        _equippedItems.TryGetFirstByItemType(ItemType.Hair, out Item hairEquipped);
-        hairSpriteRenderer.sprite = hairEquipped != null ? hairEquipped.Sprite : null;
-
-        _equippedItems.TryGetFirstByItemType(ItemType.Body, out Item bodyEquipped);
-        bodySpriteRenderer.sprite = bodyEquipped != null ? bodyEquipped.Sprite : null;
-
-        _equippedItems.TryGetFirstByItemType(ItemType.Pants, out Item pantsEquipped);
-        pantsSpriteRenderer.sprite = pantsEquipped != null ? pantsEquipped.Sprite : null;
     }
 }

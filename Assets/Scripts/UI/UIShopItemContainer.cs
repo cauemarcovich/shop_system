@@ -4,7 +4,7 @@ using Scriptable;
 using Scriptable.Core;
 using UnityEngine;
 
-namespace Shop
+namespace UI
 {
     public class UIShopItemContainer : UIItemContainer
     {

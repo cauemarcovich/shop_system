@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public class CharacterMovement : MonoBehaviour
+namespace Character
 {
-    [SerializeField]private float speed;
-    [SerializeField]private Rigidbody2D rb;
-    
-    public void SetMovement(Vector2 movement)
+    public class CharacterMovement : MonoBehaviour
     {
-        rb.velocity = movement * speed;
+        [SerializeField]private float speed;
+        [SerializeField]private Rigidbody2D rb;
+    
+        public void SetMovement(Vector2 movement)
+        {
+            rb.velocity = movement * speed;
+        }
     }
 }

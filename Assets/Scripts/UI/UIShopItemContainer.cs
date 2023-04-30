@@ -9,6 +9,9 @@ namespace Shop
     public class UIShopItemContainer : UIItemContainer
     {
         [SerializeField] private ItemRuntimeSet playerInventory;
+        
+        private void OnEnable() => playerInventory.OnValueChanged += Refresh;
+        private void OnDisable() => playerInventory.OnValueChanged -= Refresh;
        
         public override void Refresh(ItemType itemType = ItemType.None)
         {

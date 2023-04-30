@@ -1,7 +1,7 @@
 using Scriptable;
 using UnityEngine;
 
-public class OutfitHandler : MonoBehaviour
+public class CharacterOutfitHandler : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer hair;
     [SerializeField] private SpriteRenderer body;

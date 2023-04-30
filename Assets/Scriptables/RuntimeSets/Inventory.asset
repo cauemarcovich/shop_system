@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   isImmutable: 0
+  clearOnPlay: 1
   items:
   - {fileID: 11400000, guid: 029bcbd39e38d39428d0bdb25c17dbde, type: 2}
   - {fileID: 11400000, guid: e31af07d433a54c49a22d46a0925c5d5, type: 2}

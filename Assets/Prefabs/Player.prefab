@@ -90,5 +90,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c84fefa888bae41b71593dc249455c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsVariable: {fileID: 0}
-  inventorySet: {fileID: 0}
+  coinsVariable: {fileID: 11400000, guid: c3fc7aa02d80b8948a54b99a67845c73, type: 2}
+  inventorySet: {fileID: 11400000, guid: 53d83456a92a12248b26516d84b8f563, type: 2}

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using ExtensionMethods;
 using Scriptable;
 using Scriptable.Core;
 using UnityEngine;
@@ -8,49 +10,48 @@ public class CharacterOutfitHandler : MonoBehaviour
 
     [Header("SpriteRenderer References")]
     [SerializeField] private SpriteRenderer hairSpriteRenderer;
+
     [SerializeField] private SpriteRenderer bodySpriteRenderer;
     [SerializeField] private SpriteRenderer pantsSpriteRenderer;
 
-    private Item _hair;
-    private Item _body;
-    private Item _pants;
-    
+    private List<Item> _equippedItems = new() { };
+
     public void Equip(Item item)
     {
-        switch (item.Type){
-            case ItemType.Hair: EquipHair(item); break;
-            case ItemType.Body: EquipBody(item); break;
-            case ItemType.Pants: EquipPants(item); break;
-        };
-    }
+        if (_equippedItems.TryGetFirstByItemType(item.Type, out Item equippedItem))
+        {
+            Unequip(equippedItem);
+        }
 
-    private void EquipHair(Item newHair)
-    {
-        UpdateEquippedItems(newHair, _hair);
-        _hair = newHair;
-        hairSpriteRenderer.sprite = newHair.Sprite;
-    }
-    
-    private void EquipBody(Item newBody)
-    {
-        UpdateEquippedItems(newBody, _body);
-        _body = newBody;
-        bodySpriteRenderer.sprite = newBody.Sprite;
-    }
-    
-    private void EquipPants(Item newPants)
-    {
-        UpdateEquippedItems(newPants, _pants);
-        _pants = newPants;
-        pantsSpriteRenderer.sprite = newPants.Sprite;
-    }
-
-    private void UpdateEquippedItems(Item newValue, Item oldValue)
-    {
+        _equippedItems.Add(item);
         if (equippedItemsVariable != null)
         {
-            equippedItemsVariable.Remove(oldValue);
-            equippedItemsVariable.Add(newValue);
+            equippedItemsVariable.Add(item);
         }
+
+        UpdateSprites();
+    }
+
+    public void Unequip(Item item)
+    {
+        _equippedItems.Remove(item);
+        if (equippedItemsVariable != null)
+        {
+            equippedItemsVariable.Remove(item);
+        }
+
+        UpdateSprites();
+    }
+
+    private void UpdateSprites()
+    {
+        _equippedItems.TryGetFirstByItemType(ItemType.Hair, out Item hairEquipped);
+        hairSpriteRenderer.sprite = hairEquipped != null ? hairEquipped.Sprite : null;
+
+        _equippedItems.TryGetFirstByItemType(ItemType.Body, out Item bodyEquipped);
+        bodySpriteRenderer.sprite = bodyEquipped != null ? bodyEquipped.Sprite : null;
+
+        _equippedItems.TryGetFirstByItemType(ItemType.Pants, out Item pantsEquipped);
+        pantsSpriteRenderer.sprite = pantsEquipped != null ? pantsEquipped.Sprite : null;
     }
 }

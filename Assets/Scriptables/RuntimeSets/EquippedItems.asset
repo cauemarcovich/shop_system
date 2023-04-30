@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: EquippedItems
   m_EditorClassIdentifier: 
   isImmutable: 0
-  items: []
+  clearOnPlay: 1
+  items:
+  - {fileID: 11400000, guid: e31af07d433a54c49a22d46a0925c5d5, type: 2}

@@ -3,20 +3,33 @@ using UnityEngine;
 
 public class DevInput : MonoBehaviour
 {
-    // Update is called once per frame
+    [SerializeField] private Canvas shop;
+    [SerializeField] private Canvas inventory;
+    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.I))
         {
-            var shopManager = GameObject.FindObjectOfType<UIShopManager>();
-            if (shopManager.GetComponent<Canvas>().enabled)
+            if (inventory.enabled)
             {
-                Debug.Log("Close shop");
+                EventManager.TriggerEvent(CharacterEvents.INVENTORY_CLOSE);
+            }
+            else
+            {
+                EventManager.TriggerEvent(CharacterEvents.INVENTORY_OPEN);
+            }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (shop.enabled)
+            {
+                Debug.LogWarning("Disabling shop");
                 EventManager.TriggerEvent(ShopEvents.CLOSE_SHOP);
             }
             else
             {
-                Debug.Log("Open shop");
+                Debug.LogWarning("Enabling shop");
                 EventManager.TriggerEvent(ShopEvents.OPEN_SHOP);
             }
         }

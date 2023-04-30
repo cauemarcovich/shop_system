@@ -4,10 +4,10 @@ using UnityEngine.EventSystems;
 
 namespace Shop
 {
-    public class UIShopTab : MonoBehaviour, IPointerClickHandler
+    public class UITab : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField] private ItemRuntimeSet contentList;
-        [SerializeField] private UIShopItemContainer itemContainer;
+        [SerializeField] private UIItemContainer itemContainer;
 
         public void OnPointerClick(PointerEventData eventData)
         {

@@ -5,9 +5,15 @@ public class DevInput : MonoBehaviour
 {
     [SerializeField] private Canvas shop;
     [SerializeField] private Canvas inventory;
+    [SerializeField] private CharacterMovement characterMovement;
+    
+    private Vector2 _movement;
     
     void Update()
     {
+        _movement.x = Input.GetAxis("Horizontal");
+        _movement.y = Input.GetAxis("Vertical");
+        
         if (Input.GetKeyDown(KeyCode.I))
         {
             if (inventory.enabled)
@@ -35,5 +41,10 @@ public class DevInput : MonoBehaviour
                 EventManager.TriggerEvent(ShopEvents.OPEN_SHOP);
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        characterMovement.SetMovement(_movement);
     }
 }

@@ -445,6 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shop: {fileID: 409529747}
   inventory: {fileID: 585798680}
+  characterMovement: {fileID: 474131831}
 --- !u!4 &98157216
 Transform:
   m_ObjectHideFlags: 0

@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d173a9a9e8a4e859e88129a8efd919e, type: 3}
-  m_Name: Pants
+  m_Name: Hair_2
   m_EditorClassIdentifier: 
-  itemName: Pants
-  price: 400
-  sprite: {fileID: 21300000, guid: 2223b0a570b66ee42b3e0a79f0789b2a, type: 3}
+  itemName: Green Hair
+  price: 200
+  sprite: {fileID: -844334699, guid: 33c8a7f2f78a3f54cbb047651ab8c936, type: 3}
+  type: 1

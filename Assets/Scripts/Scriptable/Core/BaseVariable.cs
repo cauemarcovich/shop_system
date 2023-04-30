@@ -25,12 +25,12 @@ namespace Scriptable.Core
                 T oldValue = runtimeValue;
                 runtimeValue = value;
 
-                if (EqualityComparer<T>.Default.Equals(oldValue, value))
+                if (!EqualityComparer<T>.Default.Equals(oldValue, value))
                     OnValueChanged.Invoke();
             }
         }
 
-        public readonly Action OnValueChanged = () => { };
+        public event Action OnValueChanged = () => { };
 
         public static implicit operator T(BaseVariable<T> variable)
         {

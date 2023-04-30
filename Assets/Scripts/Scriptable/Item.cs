@@ -12,6 +12,7 @@ namespace Scriptable
         
         public string Name => itemName;
         public int Price => price;
+        public int SellPrice => Mathf.CeilToInt(price * .5f);
         public Sprite Sprite => sprite;
         public ItemType Type => type;
     }

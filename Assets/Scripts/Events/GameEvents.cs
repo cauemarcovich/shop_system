@@ -9,8 +9,10 @@ namespace Events
         ITEM_UNEQUIPPED,
         
         //SHOP
-        OPEN_SHOP,
-        CLOSE_SHOP,
+        OPEN_BUY_SHOP,
+        CLOSE_BUY_SHOP,
+        OPEN_SELL_SHOP,
+        CLOSE_SELL_SHOP,
         BUY_ITEM,
         SELL_ITEM
     }

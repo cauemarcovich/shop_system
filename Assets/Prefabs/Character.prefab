@@ -164,9 +164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 149f33e33c4490e47a0020b1380ce741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hair: {fileID: 8595668874997952201}
-  body: {fileID: 8595668874827718082}
-  pants: {fileID: 8595668875464898825}
+  equippedItemsVariable: {fileID: 0}
+  hairSpriteRenderer: {fileID: 8595668874997952201}
+  bodySpriteRenderer: {fileID: 8595668874827718082}
+  pantsSpriteRenderer: {fileID: 8595668875464898825}
 --- !u!1 &8595668874827718084
 GameObject:
   m_ObjectHideFlags: 0

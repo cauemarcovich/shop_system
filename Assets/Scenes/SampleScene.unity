@@ -1431,7 +1431,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409529743}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItemList: {fileID: 11400000, guid: 53d83456a92a12248b26516d84b8f563, type: 2}
-  itemPrefab: {fileID: 4105930054780215808, guid: ef88e2e18d4b1dc43a7000629013e659, type: 3}
+  itemPrefab: {fileID: 751020811, guid: ef88e2e18d4b1dc43a7000629013e659, type: 3}
 --- !u!1 &585798674
 GameObject:
   m_ObjectHideFlags: 0

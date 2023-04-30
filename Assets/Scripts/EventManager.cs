@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using Events;
 
 public static class EventManager
 {
-    private static readonly Dictionary<string, Action> _events = new();
-    private static readonly Dictionary<string, Action<object>> _eventsParam = new();
+    private static readonly Dictionary<GameEvents, Action> _events = new();
+    private static readonly Dictionary<GameEvents, Action<object>> _eventsParam = new();
     
-    public static void StartListening(string eventName, Action<object> listener)
+    public static void StartListening(GameEvents eventName, Action<object> listener)
     {
         if (_eventsParam.TryGetValue(eventName, out Action<object> @event))
         {
@@ -20,7 +21,7 @@ public static class EventManager
         }
     }
 
-    public static void StartListening(string eventName, Action listener)
+    public static void StartListening(GameEvents eventName, Action listener)
     {
         if (_events.TryGetValue(eventName, out Action @event))
         {
@@ -34,7 +35,7 @@ public static class EventManager
         }
     }
 
-    public static void StopListening(string eventName, Action<object> listener)
+    public static void StopListening(GameEvents eventName, Action<object> listener)
     {
         if (_eventsParam.TryGetValue(eventName, out Action<object> @event))
         {
@@ -43,7 +44,7 @@ public static class EventManager
         }
     }
 
-    public static void StopListening(string eventName, Action listener)
+    public static void StopListening(GameEvents eventName, Action listener)
     {
         if (_events.TryGetValue(eventName, out Action @event))
         {
@@ -52,7 +53,7 @@ public static class EventManager
         }
     }
 
-    public static void TriggerEvent(string eventName, object eventParam)
+    public static void TriggerEvent(GameEvents eventName, object eventParam)
     {
         if (_eventsParam.TryGetValue(eventName, out Action<object> @event))
         {
@@ -63,7 +64,7 @@ public static class EventManager
         }
     }
 
-    public static void TriggerEvent(string eventName)
+    public static void TriggerEvent(GameEvents eventName)
     {
         if (_events.TryGetValue(eventName, out Action @event))
         {

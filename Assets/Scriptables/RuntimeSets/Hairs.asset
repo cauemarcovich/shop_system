@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c791f0c524564a8fac4da4b3cdace72d, type: 3}
   m_Name: Hairs
   m_EditorClassIdentifier: 
+  isImmutable: 1
   items:
   - {fileID: 11400000, guid: 029bcbd39e38d39428d0bdb25c17dbde, type: 2}
   - {fileID: 11400000, guid: e31af07d433a54c49a22d46a0925c5d5, type: 2}

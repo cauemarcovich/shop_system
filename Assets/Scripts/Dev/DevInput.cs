@@ -12,10 +12,12 @@ public class DevInput : MonoBehaviour
         {
             if (inventory.enabled)
             {
+                Debug.LogWarning("Disabling inventory");
                 EventManager.TriggerEvent(CharacterEvents.INVENTORY_CLOSE);
             }
             else
             {
+                Debug.LogWarning("Enabling inventory");
                 EventManager.TriggerEvent(CharacterEvents.INVENTORY_OPEN);
             }
         }

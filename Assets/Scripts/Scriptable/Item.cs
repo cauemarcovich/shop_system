@@ -18,6 +18,7 @@ namespace Scriptable
 
     public enum ItemType
     {
+        None,
         Hair,
         Body,
         Pants

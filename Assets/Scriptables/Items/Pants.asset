@@ -15,3 +15,4 @@ MonoBehaviour:
   itemName: Pants
   price: 400
   sprite: {fileID: 21300000, guid: 2223b0a570b66ee42b3e0a79f0789b2a, type: 3}
+  type: 2

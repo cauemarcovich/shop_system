@@ -15,3 +15,4 @@ MonoBehaviour:
   itemName: Hat
   price: 100
   sprite: {fileID: 21300000, guid: 9f3e8a7a640b640feac66da51cc078c5, type: 3}
+  type: 1

@@ -28,5 +28,10 @@ namespace Shop
         {
             EventManager.TriggerEvent(ShopEvents.BUY_ITEM, _item);
         }
+
+        public void Buy()
+        {
+            EventManager.TriggerEvent(ShopEvents.BUY_ITEM, _item);
+        }
     }
 }

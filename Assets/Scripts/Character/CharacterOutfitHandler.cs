@@ -6,11 +6,10 @@ using UnityEngine;
 
 public class CharacterOutfitHandler : MonoBehaviour
 {
-    [SerializeField] private ItemRuntimeSet equippedItemsVariable;
+    [SerializeField] private ItemRuntimeSet equippedItemsSet;
 
     [Header("SpriteRenderer References")]
     [SerializeField] private SpriteRenderer hairSpriteRenderer;
-
     [SerializeField] private SpriteRenderer bodySpriteRenderer;
     [SerializeField] private SpriteRenderer pantsSpriteRenderer;
 
@@ -24,9 +23,9 @@ public class CharacterOutfitHandler : MonoBehaviour
         }
 
         _equippedItems.Add(item);
-        if (equippedItemsVariable != null)
+        if (equippedItemsSet != null)
         {
-            equippedItemsVariable.Add(item);
+            equippedItemsSet.Add(item);
         }
 
         UpdateSprites();
@@ -35,9 +34,9 @@ public class CharacterOutfitHandler : MonoBehaviour
     public void Unequip(Item item)
     {
         _equippedItems.Remove(item);
-        if (equippedItemsVariable != null)
+        if (equippedItemsSet != null)
         {
-            equippedItemsVariable.Remove(item);
+            equippedItemsSet.Remove(item);
         }
 
         UpdateSprites();

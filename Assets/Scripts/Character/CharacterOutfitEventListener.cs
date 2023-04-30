@@ -15,12 +15,14 @@ namespace Character
         {
             EventManager.StartListening(CharacterEvents.ITEM_EQUIPPED, Equip);
             EventManager.StartListening(CharacterEvents.ITEM_UNEQUIPPED, Unequip);
+            EventManager.StartListening(ShopEvents.SELL_ITEM, Unequip);
         }
 
         private void OnDisable()
         {
             EventManager.StopListening(CharacterEvents.ITEM_EQUIPPED, Equip);
             EventManager.StopListening(CharacterEvents.ITEM_UNEQUIPPED, Unequip);
+            EventManager.StartListening(ShopEvents.SELL_ITEM, Unequip);
         }
 
         public void Equip(object item) => _characterOutfitHandler.Equip((Item)item);

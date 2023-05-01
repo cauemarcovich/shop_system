@@ -970,8 +970,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad31701603b3e84cad076a6e7f0d58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showEvent: 6
-  hideEvent: 7
+  showEvent: 8
+  hideEvent: 9
 --- !u!114 &64666847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5753,6 +5753,63 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+--- !u!1001 &1045305806
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2757437500668658850, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_Name
+      value: ShopKeeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757437500668658862, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757437500668658862, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757437500668658862, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.626
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757437500668658862, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757437500668658862, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757437500668658862, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757437500668658862, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757437500668658862, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757437500668658862, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757437500668658862, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757437500668658862, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5db4fa7c09a412840aee80194e82a40a, type: 3}
 --- !u!1 &1064351034
 GameObject:
   m_ObjectHideFlags: 0
@@ -8159,9 +8216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532579615288c1a4485fc577a1124f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyShop: {fileID: 0}
-  sellShop: {fileID: 0}
-  inventory: {fileID: 0}
+  buyShop: {fileID: 409529747}
+  sellShop: {fileID: 64666850}
+  inventory: {fileID: 585798680}
   characterMovement: {fileID: 7793845}
 --- !u!4 &1413878433
 Transform:

@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 1682099823
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1492813630, guid: 4cbabfad39ff4b046a51512b94cf861f, type: 3}
+  m_Sprite: {fileID: -942096943, guid: 4cbabfad39ff4b046a51512b94cf861f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,9 +155,9 @@ MonoBehaviour:
   initialHair: {fileID: 0}
   initialBody: {fileID: 0}
   initialPants: {fileID: 0}
-  hairSpriteRenderer: {fileID: 8595668874997952201}
-  bodySpriteRenderer: {fileID: 8595668874827718082}
-  pantsSpriteRenderer: {fileID: 8595668875464898825}
+  hairSpriteLibrary: {fileID: 7574670265130466520}
+  bodySpriteLibrary: {fileID: 7127543762161112760}
+  pantsSpriteLibrary: {fileID: 5493102636490238109}
   equippedItemsSet: {fileID: 0}
 --- !u!1 &8595668874590767907
 GameObject:

@@ -13,6 +13,15 @@ MonoBehaviour:
   m_Name: ShopItems
   m_EditorClassIdentifier: 
   isImmutable: 0
+  clearOnPlay: 0
   items:
+  - {fileID: 11400000, guid: fea8e31d8e0f9f743917ee05c6bbe7af, type: 2}
+  - {fileID: 11400000, guid: 15f46fa528750db49a5eed35f6e38445, type: 2}
+  - {fileID: 11400000, guid: 7230bce11e2509b4e8122714b2e69061, type: 2}
   - {fileID: 11400000, guid: 029bcbd39e38d39428d0bdb25c17dbde, type: 2}
   - {fileID: 11400000, guid: e31af07d433a54c49a22d46a0925c5d5, type: 2}
+  - {fileID: 11400000, guid: 5deca38db6bd4cf40aeb2e71c34efe5a, type: 2}
+  - {fileID: 11400000, guid: b6a3523808ba07a49829e6985b29cb31, type: 2}
+  - {fileID: 11400000, guid: e0d45c007618a034eaea67457f086a09, type: 2}
+  - {fileID: 11400000, guid: f6d1e8401f1fb3740980a674725b1086, type: 2}
+  - {fileID: 11400000, guid: 2d7c46a88b1c5b14eb27731bbd4a0c49, type: 2}

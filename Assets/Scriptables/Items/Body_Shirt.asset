@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d173a9a9e8a4e859e88129a8efd919e, type: 3}
+  m_Name: Body_Shirt
+  m_EditorClassIdentifier: 
+  itemName: Shirt
+  price: 100
+  spriteLibrary: {fileID: 7108339969198208228, guid: 2c9fcd9732f8edb49b098cc716ec5d15, type: 3}
+  type: 2

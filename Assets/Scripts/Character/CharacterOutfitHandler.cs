@@ -12,10 +12,36 @@ namespace Character
 
         [Header("SpriteRenderer References")]
         [SerializeField] private SpriteRenderer hairSpriteRenderer;
+
         [SerializeField] private SpriteRenderer bodySpriteRenderer;
         [SerializeField] private SpriteRenderer pantsSpriteRenderer;
 
         private List<Item> _equippedItems = new() { };
+
+        public Item HairEquipped
+        {
+            get
+            {
+                _equippedItems.TryGetFirstByItemType(ItemType.Hair, out Item equip);
+                return equip;
+            }
+        }
+        public Item BodyEquipped
+        {
+            get
+            {
+                _equippedItems.TryGetFirstByItemType(ItemType.Body, out Item equip);
+                return equip;
+            }
+        }
+        public Item PantsEquipped
+        {
+            get
+            {
+                _equippedItems.TryGetFirstByItemType(ItemType.Pants, out Item equip);
+                return equip;
+            }
+        }
 
         public void Equip(Item item)
         {
@@ -44,6 +70,16 @@ namespace Character
 
             UpdateSprites();
         }
+
+        public void UnequipAll()
+        {
+            for (int i = 0; i < _equippedItems.Count; i++)
+            {
+                Unequip(_equippedItems[i]);
+            }
+        }
+
+        public bool HasAnyEquip() => _equippedItems.Count > 0;
 
         private void UpdateSprites()
         {

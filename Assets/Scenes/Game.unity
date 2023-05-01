@@ -4372,7 +4372,7 @@ PrefabInstance:
     - target: {fileID: 3306371607148311888, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 334267450, guid: 3281ed37430e5434088bc8c0b7775644, type: 3}
+      objectReference: {fileID: -934449835, guid: 3281ed37430e5434088bc8c0b7775644, type: 3}
     - target: {fileID: 3306371607148311888, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -4384,7 +4384,7 @@ PrefabInstance:
     - target: {fileID: 3306371607296837211, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1383447750, guid: 165c606121e59684d8012c6a168f4aed, type: 3}
+      objectReference: {fileID: -2081881944, guid: 165c606121e59684d8012c6a168f4aed, type: 3}
     - target: {fileID: 3306371607296837211, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -4396,7 +4396,7 @@ PrefabInstance:
     - target: {fileID: 4053656862422945057, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
       propertyPath: m_SpriteLibraryAsset
       value: 
-      objectReference: {fileID: 7108339969198208228, guid: 2c9fcd9732f8edb49b098cc716ec5d15, type: 3}
+      objectReference: {fileID: 7108339969198208228, guid: f3d7eaf3cca2d004883606a7004c1685, type: 3}
     - target: {fileID: 4928822216247976949, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
       propertyPath: m_SpriteKey
       value: 0
@@ -4404,7 +4404,7 @@ PrefabInstance:
     - target: {fileID: 6266184799275652971, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1492813630, guid: 4cbabfad39ff4b046a51512b94cf861f, type: 3}
+      objectReference: {fileID: 1551188240, guid: 4cbabfad39ff4b046a51512b94cf861f, type: 3}
     - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
       propertyPath: text
       value: Choose your destiny!

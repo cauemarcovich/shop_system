@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 5464015176702721447}
-  itemName: {fileID: 0}
+  itemName: {fileID: 904257819573913432}
   equippedItems: {fileID: 11400000, guid: fada0f88edc49d04d8f2b9e2c13e919e, type: 2}
   equipButton: {fileID: 361772399}
   unequipButton: {fileID: 318164177}

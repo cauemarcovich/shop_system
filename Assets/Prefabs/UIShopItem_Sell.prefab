@@ -33,7 +33,7 @@ RectTransform:
   m_Children:
   - {fileID: 7929276596055244433}
   m_Father: {fileID: 5581330307873938047}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.77, y: 0.5}
   m_AnchorMax: {x: 0.95, y: 0.5}
@@ -282,10 +282,6 @@ PrefabInstance:
       propertyPath: shopItemType
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3615749177113368339, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
-      propertyPath: playerCoinsVariable
-      value: 
-      objectReference: {fileID: 11400000, guid: c3fc7aa02d80b8948a54b99a67845c73, type: 2}
     - target: {fileID: 5330478653165099002, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -376,7 +372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5543260942254842668, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6995412860585482279, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_AnchoredPosition.y

@@ -478,8 +478,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 5464015176702721447}
   itemName: {fileID: 4318435296115616413}
-  price: {fileID: 0}
-  playerCoinsVariable: {fileID: 0}
+  price: {fileID: 5262114102942811458}
+  playerCoinsVariable: {fileID: 11400000, guid: c3fc7aa02d80b8948a54b99a67845c73, type: 2}
   shopItemType: 0
 --- !u!1 &8237806411855053582
 GameObject:

@@ -6,6 +6,7 @@ namespace Character
     {
         [SerializeField] private float speed;
         [SerializeField] private Rigidbody2D rb;
+        [SerializeField] private AnimationHandler animationHandler;
 
         private Vector2 _moveDirection;
         public Vector2 MoveDirection => _moveDirection;
@@ -31,6 +32,8 @@ namespace Character
                 if (movement.y > 0f) _moveDirection = Vector2.up;
                 else _moveDirection = Vector2.down;
             }
+
+            animationHandler.UpdateAnimationWithDirection(_moveDirection);
         }
     }
 }

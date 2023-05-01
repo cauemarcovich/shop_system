@@ -23,7 +23,6 @@ namespace Scriptable
             if (SpriteLibrary == null) return null;
 
             var labels = spriteLibrary.GetCategoryLabelNames("Down").ToArray();
-            Debug.Log("label -> " + labels[0]);
             return spriteLibrary.GetSprite("down", labels[0]);
         }
     }

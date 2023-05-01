@@ -1,10 +1,13 @@
 using Events;
 using UnityEngine;
 
-public class ShopKeeper : MonoBehaviour
+namespace Character
 {
-    public void ShowBuyStore()
+    public class ShopKeeper : MonoBehaviour
     {
-        EventManager.TriggerEvent(ShopEvents.OPEN_BUY_SHOP);
+        public void ShowBuyStore()
+        {
+            EventManager.TriggerEvent(ShopEvents.OPEN_BUY_SHOP);
+        }
     }
 }

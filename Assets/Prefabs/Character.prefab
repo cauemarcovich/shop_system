@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 8128475052748403916}
   - component: {fileID: 8894277638676930553}
   - component: {fileID: 5308713815393724454}
+  - component: {fileID: 5977689414346110412}
+  - component: {fileID: 539073327548206130}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -90,7 +92,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &3882036344424275746
 Animator:
   serializedVersion: 4
@@ -159,6 +161,29 @@ MonoBehaviour:
   bodySpriteLibrary: {fileID: 7127543762161112760}
   pantsSpriteLibrary: {fileID: 5493102636490238109}
   equippedItemsSet: {fileID: 0}
+--- !u!114 &5977689414346110412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5939623883359965036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5fa484bb4f1cd4a8f329b7c836ff28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!210 &539073327548206130
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5939623883359965036}
+  m_Enabled: 1
+  m_SortingLayerID: 1682099823
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!1 &8595668874590767907
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   rb: {fileID: 8595668874590767904}
+  animationHandler: {fileID: 5977689414346110412}
 --- !u!1 &8595668874827718084
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +355,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1682099823
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -444,7 +470,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1682099823
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -559,7 +585,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1682099823
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

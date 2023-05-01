@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1682099823
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -942096943, guid: 4cbabfad39ff4b046a51512b94cf861f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &8595668874590767904
 Rigidbody2D:
   serializedVersion: 4
@@ -128,8 +128,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 149f33e33c4490e47a0020b1380ce741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equippedItemsVariable: {fileID: 0}
+  equippedItemsSet: {fileID: 0}
   hairSpriteRenderer: {fileID: 8595668874997952201}
   bodySpriteRenderer: {fileID: 8595668874827718082}
   pantsSpriteRenderer: {fileID: 8595668875464898825}

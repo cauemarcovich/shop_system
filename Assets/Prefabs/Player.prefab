@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5308713815393724454, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: initialBody
+      value: 
+      objectReference: {fileID: 11400000, guid: 15f46fa528750db49a5eed35f6e38445, type: 2}
+    - target: {fileID: 5308713815393724454, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: initialHair
+      value: 
+      objectReference: {fileID: 11400000, guid: 029bcbd39e38d39428d0bdb25c17dbde, type: 2}
+    - target: {fileID: 5308713815393724454, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: initialPants
+      value: 
+      objectReference: {fileID: 11400000, guid: e0d45c007618a034eaea67457f086a09, type: 2}
+    - target: {fileID: 5308713815393724454, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: equippedItemsSet
+      value: 
+      objectReference: {fileID: 11400000, guid: fada0f88edc49d04d8f2b9e2c13e919e, type: 2}
     - target: {fileID: 8595668874590767907, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -70,18 +86,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8595668874590767907, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
   m_PrefabInstance: {fileID: 2422380333165036585}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6597557752325658555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6257739968008720138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de422599c0df476b868dc5598b94c8ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7592744910442365539
 MonoBehaviour:
   m_ObjectHideFlags: 0

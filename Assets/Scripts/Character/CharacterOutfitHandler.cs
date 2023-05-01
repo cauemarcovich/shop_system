@@ -6,6 +6,8 @@ using Scriptable;
 using Scriptable.Core;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.U2D.Animation;
 using Random = UnityEngine.Random;
 
 namespace Character
@@ -17,10 +19,9 @@ namespace Character
         [SerializeField] private Item initialPants;
 
         [Header("SpriteRenderer References")]
-        [SerializeField] private SpriteRenderer hairSpriteRenderer;
-
-        [SerializeField] private SpriteRenderer bodySpriteRenderer;
-        [SerializeField] private SpriteRenderer pantsSpriteRenderer;
+        [SerializeField] private SpriteLibrary hairSpriteLibrary;
+        [SerializeField] private SpriteLibrary bodySpriteLibrary;
+        [SerializeField] private SpriteLibrary pantsSpriteLibrary;
 
         [Header("Equipped Items Set (Optional)")]
         [SerializeField] private ItemRuntimeSet equippedItemsSet;
@@ -102,9 +103,9 @@ namespace Character
 
         private void UpdateSprites()
         {
-            hairSpriteRenderer.sprite = _hair != null ? _hair.Sprite : null;
-            bodySpriteRenderer.sprite = _body != null ? _body.Sprite : null;
-            pantsSpriteRenderer.sprite = _pants != null ? _pants.Sprite : null;
+            hairSpriteLibrary.spriteLibraryAsset = _hair != null ? _hair.SpriteLibrary : null;
+            bodySpriteLibrary.spriteLibraryAsset = _body != null ? _body.SpriteLibrary : null;
+            pantsSpriteLibrary.spriteLibraryAsset = _pants != null ? _pants.SpriteLibrary : null;
         }
 
         private ItemRuntimeSet _shopItemsSets;

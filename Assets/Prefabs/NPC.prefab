@@ -7,9 +7,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 891310140402584818, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -509491558, guid: 4cbabfad39ff4b046a51512b94cf861f, type: 3}
+    - target: {fileID: 891310140402584818, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219664974377318508, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_SpriteKey
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2601580837460051216, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2663547615054835483, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_SpriteKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493102636490238109, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_SpriteLibraryAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514152495915941088, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_SpriteKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127543762161112760, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_SpriteLibraryAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574670265130466520, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_SpriteLibraryAsset
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8595668874590767904, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
       propertyPath: m_BodyType
@@ -61,6 +93,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8595668874590767919, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595668874827718082, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595668874827718082, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595668874997952201, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595668874997952201, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595668874997952201, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595668874997952201, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595668875464898825, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595668875464898825, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595668875464898825, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595668875464898825, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894277638676930553, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+      propertyPath: m_SpriteKey
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

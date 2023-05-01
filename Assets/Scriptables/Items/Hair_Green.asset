@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d173a9a9e8a4e859e88129a8efd919e, type: 3}
-  m_Name: Hair_1
+  m_Name: Hair_Green
   m_EditorClassIdentifier: 
-  itemName: Brown Hair
+  itemName: Green Hair
   price: 100
-  sprite: {fileID: -129144502, guid: 462ad7c57169df14099d407a1ca79e70, type: 3}
+  spriteLibrary: {fileID: 7108339969198208228, guid: 9f422b8653245e746a8d3a06a22c8343, type: 3}
   type: 1

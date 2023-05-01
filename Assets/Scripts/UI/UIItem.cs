@@ -16,8 +16,8 @@ namespace UI
         public virtual void SetItemData(Item item)
         {
             _item = item;
-            
-            icon.sprite = item.Sprite;
+
+            icon.sprite = item.GetFirstSprite();
             itemName.text = item.Name;
         }
     }

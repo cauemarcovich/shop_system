@@ -7,6 +7,8 @@ namespace Events
         INVENTORY_CLOSE,
         ITEM_EQUIPPED,
         ITEM_UNEQUIPPED,
+        DIALOGUE_OPEN,
+        DIALOGUE_CLOSE,
         
         //SHOP
         OPEN_BUY_SHOP,

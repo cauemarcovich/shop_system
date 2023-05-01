@@ -19,6 +19,7 @@ namespace Character
 
         public void Equip(Item item)
         {
+            Debug.Log("Euipping");
             if (_equippedItems.TryGetFirstByItemType(item.Type, out Item equippedItem))
             {
                 Unequip(equippedItem);

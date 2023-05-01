@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Dialogue
 {
-    [RequireComponent(typeof(CharacterOutfitHandler))]
     public class CharacterDialogueHandler : MonoBehaviour
     {
         [SerializeField] [TextArea] private string text;

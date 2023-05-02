@@ -76,6 +76,7 @@ namespace Dialogue
         public bool IsShopDialogue { get; set; }
         public DialogueButtonConfig Button1Config { get; set; }
         public DialogueButtonConfig Button2Config { get; set; }
+        public bool BlockAutoInteraction { get; set; }
     }
 
     public class DialogueButtonConfig

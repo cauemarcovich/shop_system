@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1371120889090880447, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: initialBody
+      value: 
+      objectReference: {fileID: 11400000, guid: 7230bce11e2509b4e8122714b2e69061, type: 2}
+    - target: {fileID: 1371120889090880447, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: initialPants
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d7c46a88b1c5b14eb27731bbd4a0c49, type: 2}
     - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -54,6 +62,22 @@ PrefabInstance:
     - target: {fileID: 3306371605386236090, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
       propertyPath: m_Name
       value: ShopKeeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371606658818704, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2016885927, guid: 5832d9af108d7ea469f5eec8ba23c519, type: 3}
+    - target: {fileID: 3306371606658818704, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371607296837211, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2056445293, guid: 165c606121e59684d8012c6a168f4aed, type: 3}
+    - target: {fileID: 3306371607296837211, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
       propertyPath: text

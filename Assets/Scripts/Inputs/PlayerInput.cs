@@ -25,6 +25,11 @@ namespace Inputs
                 {
                     OpenInventory();
                 }
+
+                if (panelTracker.IsDialogueOpen && !panelTracker.BlockAutoInteraction)
+                {
+                    HandleDialogue();
+                }
             }
 
             ClosePanel();
@@ -72,6 +77,14 @@ namespace Inputs
                         }
                     }
                 }
+            }
+        }
+
+        public void HandleDialogue()
+        {
+            if (Input.GetButtonDown("Interaction"))
+            {
+                EventManager.TriggerEvent(GameEvents.DIALOGUE_CLOSE);
             }
         }
 

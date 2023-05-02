@@ -9,6 +9,7 @@ namespace Dialogue
     {
         [SerializeField] private CharacterOutfitHandler outfitHandler;
         [SerializeField] [TextArea] private string text;
+        [SerializeField] private bool blockAutoInteraction;
 
         [Header("Button 1 Configuration")]
         [SerializeField] private string button1Name;
@@ -24,7 +25,8 @@ namespace Dialogue
             {
                 CharacterOutfitHandler = outfitHandler,
                 Text = text,
-                IsShopDialogue = false
+                IsShopDialogue = false,
+                BlockAutoInteraction = blockAutoInteraction
             };
             if (button1Event.GetPersistentEventCount() > 0)
                 dialogue.Button1Config = new DialogueButtonConfig() { Name = button1Name, Event = button1Event };

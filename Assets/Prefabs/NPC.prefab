@@ -141,6 +141,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+--- !u!114 &1371120889090880447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5308713815393724454, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
+  m_PrefabInstance: {fileID: 6533425883605195673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149f33e33c4490e47a0020b1380ce741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3306371605386236086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8595668874590767919, guid: 7520662346da49444834c2ad9e4caf1f, type: 3}
@@ -163,6 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269039210c792a747af6932f71052c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outfitHandler: {fileID: 1371120889090880447}
   text: 
 --- !u!1001 &8307089236032423051
 PrefabInstance:
@@ -193,7 +205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070849835875419098, guid: 975d82174cded7442a37f9eef84facb2, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CharacterDialogueHandler, Assembly-CSharp
+      value: Dialogue.CharacterDialogueHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6070849835875419098, guid: 975d82174cded7442a37f9eef84facb2, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

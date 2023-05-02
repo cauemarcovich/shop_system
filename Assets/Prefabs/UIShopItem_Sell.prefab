@@ -26,7 +26,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4146305827275941645}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35,7 +35,7 @@ RectTransform:
   m_Father: {fileID: 5581330307873938047}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8, y: 0.5}
+  m_AnchorMin: {x: 0.77, y: 0.5}
   m_AnchorMax: {x: 0.95, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 74}
@@ -68,9 +68,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 825062410, guid: e9af6557b1f79ce4bad57a022a2cf196, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4290298111
+  m_fontColor: {r: 1, g: 0.75212693, b: 0.7232704, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -229,8 +229,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 44
+  m_fontSizeBase: 44
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -282,10 +282,6 @@ PrefabInstance:
       propertyPath: shopItemType
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3615749177113368339, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
-      propertyPath: playerCoinsVariable
-      value: 
-      objectReference: {fileID: 11400000, guid: c3fc7aa02d80b8948a54b99a67845c73, type: 2}
     - target: {fileID: 5330478653165099002, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -304,7 +300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5330478653165099002, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5330478653165099002, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_AnchorMin.x
@@ -312,11 +308,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5330478653165099002, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5330478653165099002, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 781.55
       objectReference: {fileID: 0}
     - target: {fileID: 5330478653165099002, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_SizeDelta.y
@@ -352,11 +348,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5330478653165099002, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 400.775
       objectReference: {fileID: 0}
     - target: {fileID: 5330478653165099002, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -460
       objectReference: {fileID: 0}
     - target: {fileID: 5330478653165099002, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -373,6 +369,14 @@ PrefabInstance:
     - target: {fileID: 5330478653165099003, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
       propertyPath: m_Name
       value: UIShopItem_Sell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543260942254842668, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6995412860585482279, guid: 000328ade030c684e8433a9609d8fc17, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 000328ade030c684e8433a9609d8fc17, type: 3}

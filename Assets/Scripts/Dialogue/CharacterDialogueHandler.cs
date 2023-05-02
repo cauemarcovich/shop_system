@@ -6,17 +6,15 @@ namespace Dialogue
 {
     public class CharacterDialogueHandler : MonoBehaviour
     {
+        [SerializeField] private CharacterOutfitHandler outfitHandler;
         [SerializeField] [TextArea] private string text;
-
-        private CharacterOutfitHandler _outfitHandler;
-
-        private void Awake() => _outfitHandler = GetComponent<CharacterOutfitHandler>();
+        
 
         public void ShowDialog()
         {
             var dialogue = new Dialogue()
             {
-                Character = _outfitHandler,
+                Character = outfitHandler,
                 Text = text,
                 IsShopDialogue = false
             };

@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using ExtensionMethods;
 using Scriptable;
 using Scriptable.Core;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.U2D.Animation;
 using Random = UnityEngine.Random;
 
@@ -18,7 +15,7 @@ namespace Character
         [SerializeField] private Item initialBody;
         [SerializeField] private Item initialPants;
 
-        [Header("SpriteRenderer References")]
+        [Header("SpriteLibrary References")]
         [SerializeField] private SpriteLibrary hairSpriteLibrary;
         [SerializeField] private SpriteLibrary bodySpriteLibrary;
         [SerializeField] private SpriteLibrary pantsSpriteLibrary;
@@ -27,12 +24,11 @@ namespace Character
         [SerializeField] private ItemRuntimeSet equippedItemsSet;
 
         private Item _hair;
+        public Item Hair => _hair;
         private Item _body;
+        public Item Body => _body;
         private Item _pants;
-
-        // public Item HairEquipped => _hair;
-        // public Item BodyEquipped => _body;
-        // public Item PantsEquipped => _pants;
+        public Item Pants => _pants;
 
         private void Start()
         {

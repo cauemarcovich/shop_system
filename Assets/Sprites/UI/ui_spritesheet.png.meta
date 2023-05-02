@@ -2961,7 +2961,7 @@ TextureImporter:
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 9, z: 2, w: 5}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -3024,7 +3024,7 @@ TextureImporter:
         height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 2, z: 1, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -6766,7 +6766,7 @@ TextureImporter:
       ui_spritesheet_212: 1698105117
       ui_spritesheet_25: 1548829090
       ui_spritesheet_129: -327550023
-      ui_spritesheet_102: 1029619108
+      ui_spritesheet_87: 1265853810
       ui_spritesheet_209: 254409085
       ui_spritesheet_84: 1270849804
       ui_spritesheet_166: -842420513
@@ -6919,9 +6919,10 @@ TextureImporter:
       ui_spritesheet_218: -374603861
       ui_spritesheet_64: -343250310
       ui_spritesheet_11: -1030978101
-      ui_spritesheet_131: 1547532223
       ui_spritesheet_143: 664994256
+      ui_spritesheet_51: -1847589502
       ui_spritesheet_83: -1108859593
+      ui_spritesheet_131: 1547532223
       ui_spritesheet_13: 142965904
       ui_spritesheet_124: 1781187705
       ui_spritesheet_174: -736623845
@@ -6932,7 +6933,6 @@ TextureImporter:
       ui_spritesheet_268: 210300832
       ui_spritesheet_264: -282516660
       ui_spritesheet_287: 249107875
-      ui_spritesheet_51: -1847589502
       ui_spritesheet_271: -762300976
       ui_spritesheet_8: 654985013
       ui_spritesheet_194: 1482977303
@@ -7078,7 +7078,7 @@ TextureImporter:
       ui_spritesheet_12: -86861474
       ui_spritesheet_214: 732056511
       ui_spritesheet_207: 1440435038
-      ui_spritesheet_87: 1265853810
+      ui_spritesheet_102: 1029619108
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

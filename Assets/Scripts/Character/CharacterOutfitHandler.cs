@@ -17,6 +17,7 @@ namespace Character
 
         [Header("SpriteLibrary References")]
         [SerializeField] private SpriteLibrary hairSpriteLibrary;
+
         [SerializeField] private SpriteLibrary bodySpriteLibrary;
         [SerializeField] private SpriteLibrary pantsSpriteLibrary;
 
@@ -102,7 +103,21 @@ namespace Character
             hairSpriteLibrary.spriteLibraryAsset = _hair != null ? _hair.SpriteLibrary : null;
             bodySpriteLibrary.spriteLibraryAsset = _body != null ? _body.SpriteLibrary : null;
             pantsSpriteLibrary.spriteLibraryAsset = _pants != null ? _pants.SpriteLibrary : null;
+
+            FixEmptySpriteRenderer();
         }
+
+        //I'm sure this method shouldn't exist
+        private void FixEmptySpriteRenderer()
+        {
+            if (hairSpriteLibrary.spriteLibraryAsset == null)
+                hairSpriteLibrary.GetComponent<SpriteRenderer>().sprite = null;
+            if (bodySpriteLibrary.spriteLibraryAsset == null)
+                bodySpriteLibrary.GetComponent<SpriteRenderer>().sprite = null;
+            if (pantsSpriteLibrary.spriteLibraryAsset == null)
+                pantsSpriteLibrary.GetComponent<SpriteRenderer>().sprite = null;
+        }
+
 
         private ItemRuntimeSet _shopItemsSets;
 

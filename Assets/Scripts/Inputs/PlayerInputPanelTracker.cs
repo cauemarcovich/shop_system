@@ -1,3 +1,4 @@
+using Dialogue;
 using Events;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace Inputs
         public bool IsSellShopOpen { get; private set; }
         public bool IsInventoryOpen { get; private set; }
         public bool IsDialogueOpen { get; private set; }
+        public bool BlockAutoInteraction { get; private set; }
 
         private void OnEnable()
         {
@@ -40,8 +42,18 @@ namespace Inputs
         private void SetSellShopClose() => IsSellShopOpen = false;
         private void SetInventoryOpen() => IsInventoryOpen = true;
         private void SetInventoryClose() => IsInventoryOpen = false;
-        private void SetDialogueOpen(object dialogue) => IsDialogueOpen = true;
-        private void SetDialogueClose() => IsDialogueOpen = false;
+
+        private void SetDialogueOpen(object dialogue)
+        {
+            BlockAutoInteraction = ((DialogueData) dialogue).BlockAutoInteraction;
+            IsDialogueOpen = true;
+        }
+
+        private void SetDialogueClose()
+        {
+            BlockAutoInteraction = false;
+            IsDialogueOpen = false;
+        }
 
         public bool HasAnyWindowOpen() => IsBuyShopOpen || IsSellShopOpen || IsInventoryOpen || IsDialogueOpen;
     }

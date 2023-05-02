@@ -98,7 +98,8 @@ namespace Character
         {
             Text = text,
             CharacterOutfitHandler = outfitHandler,
-            IsShopDialogue = true
+            IsShopDialogue = true,
+            BlockAutoInteraction = true
         };
     }
 }

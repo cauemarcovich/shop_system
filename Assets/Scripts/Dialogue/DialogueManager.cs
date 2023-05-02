@@ -2,13 +2,17 @@ using Character;
 using Events;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Dialogue
 {
     public class DialogueManager : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI textMesh;
         [SerializeField] private CharacterPreviewOutfitHandler characterPreviewOutfitHandler;
+        [SerializeField] private TextMeshProUGUI textMesh;
+        [SerializeField] private Button button1;
+        [SerializeField] private Button button2;
 
         [Header("Anchors")]
         [SerializeField] private float shopMinXAnchor;
@@ -44,6 +48,29 @@ namespace Dialogue
             minAnchor.x = isShopDialogue ? shopMinXAnchor : 0f;
             _rect.anchorMin = minAnchor;
         }
+
+        private void ManageButtons(UnityEvent button1Event, UnityEvent button2Event)
+        {
+            if (button1Event != null)
+            {
+                button1.gameObject.SetActive(true);
+                button1.onClick.AddListener(button1Event.Invoke);
+            }
+            else
+            {
+                button1.gameObject.SetActive(false);
+            }
+            
+            if (button2Event != null)
+            {
+                button2.gameObject.SetActive(true);
+                button2.onClick.AddListener(button2Event.Invoke);
+            }
+            else
+            {
+                button1.gameObject.SetActive(false);
+            }
+        }
     }
 
     public class Dialogue
@@ -51,5 +78,7 @@ namespace Dialogue
         public CharacterOutfitHandler Character { get; set; }
         public string Text { get; set; }
         public bool IsShopDialogue { get; set; }
+        public UnityEvent Button1Event { get; set; }
+        public UnityEvent Button2Event { get; set; }
     }
 }

@@ -13,9 +13,20 @@ namespace Inputs
 
         void Update()
         {
-            CacheMoveInput();
-            OpenInventory();
-            HandleInteraction();
+            if (!panelTracker.HasAnyWindowOpen())
+            {
+                CacheMoveInput();
+                OpenInventory();
+                HandleInteraction();
+            }
+            else
+            {
+                if (panelTracker.IsInventoryOpen)
+                {
+                    OpenInventory();
+                }
+            }
+
             ClosePanel();
         }
 
@@ -32,7 +43,7 @@ namespace Inputs
 
         private void OpenInventory()
         {
-            if (Input.GetKeyDown(KeyCode.I))
+            if (Input.GetButtonDown("Inventory"))
             {
                 EventManager.TriggerEvent(panelTracker.IsInventoryOpen
                     ? CharacterEvents.INVENTORY_CLOSE
@@ -42,7 +53,7 @@ namespace Inputs
 
         public void HandleInteraction()
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetButtonDown("Interaction"))
             {
                 var moveDirection = characterMovement.MoveDirection;
 
@@ -66,7 +77,7 @@ namespace Inputs
 
         private void ClosePanel()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetButtonDown("Cancel"))
             {
                 if (panelTracker.IsBuyShopOpen) EventManager.TriggerEvent(ShopEvents.CLOSE_BUY_SHOP);
                 if (panelTracker.IsSellShopOpen) EventManager.TriggerEvent(ShopEvents.CLOSE_SELL_SHOP);

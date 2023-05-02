@@ -41,6 +41,8 @@ namespace Inputs
         private void SetInventoryOpen() => IsInventoryOpen = true;
         private void SetInventoryClose() => IsInventoryOpen = false;
         private void SetDialogueOpen(object dialogue) => IsDialogueOpen = true;
-        private void SetDialogueClose(object dialogue) => IsDialogueOpen = false;
+        private void SetDialogueClose() => IsDialogueOpen = false;
+
+        public bool HasAnyWindowOpen() => IsBuyShopOpen || IsSellShopOpen || IsInventoryOpen || IsDialogueOpen;
     }
 }

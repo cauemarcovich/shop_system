@@ -31,11 +31,13 @@ namespace UI
 
         public void Equip()
         {
+            AudioManager.Instance.PlayClick();
             EventManager.TriggerEvent(CharacterEvents.ITEM_EQUIPPED, Item);
         }
 
         public void Unequip()
         {
+            AudioManager.Instance.PlayClick();
             EventManager.TriggerEvent(CharacterEvents.ITEM_UNEQUIPPED, Item);
         }
     }

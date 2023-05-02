@@ -7,7 +7,14 @@ namespace Character
     {
         public void ShowBuyStore()
         {
+            EventManager.TriggerEvent(CharacterEvents.DIALOGUE_CLOSE);
             EventManager.TriggerEvent(ShopEvents.OPEN_BUY_SHOP);
+        }
+        
+        public void ShowSellStore()
+        {
+            EventManager.TriggerEvent(CharacterEvents.DIALOGUE_CLOSE);
+            EventManager.TriggerEvent(ShopEvents.OPEN_SELL_SHOP);
         }
     }
 }

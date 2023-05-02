@@ -9,9 +9,14 @@ namespace Dialogue
     {
         [SerializeField] private CharacterOutfitHandler outfitHandler;
         [SerializeField] [TextArea] private string text;
+
+        [Header("Button 1 Configuration")]
+        [SerializeField] private string button1Name;
         [SerializeField] private UnityEvent button1Event;
+
+        [Header("Button 2 Configuration")]
+        [SerializeField] private string button2Name;
         [SerializeField] private UnityEvent button2Event;
-        
 
         public void ShowDialog()
         {
@@ -19,10 +24,14 @@ namespace Dialogue
             {
                 Character = outfitHandler,
                 Text = text,
-                IsShopDialogue = false,
-                Button1Event = button1Event,
-                Button2Event = button2Event
+                IsShopDialogue = false
             };
+            if (button1Event != null)
+                dialogue.Button1Config = new DialogueButtonConfig() { Name = button1Name, Event = button1Event };
+
+            if (button1Event != null)
+                dialogue.Button2Config = new DialogueButtonConfig() { Name = button2Name, Event = button2Event };
+                    
             EventManager.TriggerEvent(CharacterEvents.DIALOGUE_OPEN, dialogue);
         }
     }

@@ -11,6 +11,7 @@ namespace Dialogue
     {
         [SerializeField] private CharacterPreviewOutfitHandler characterPreviewOutfitHandler;
         [SerializeField] private TextMeshProUGUI textMesh;
+
         [SerializeField] private Button button1;
         [SerializeField] private Button button2;
 
@@ -40,6 +41,9 @@ namespace Dialogue
             characterPreviewOutfitHandler.SetPreviewOutfit(dialogue.Character.Hair, dialogue.Character.Body,
                 dialogue.Character.Pants);
             textMesh.text = dialogue.Text;
+
+            ManageButton(button1, dialogue.Button1Config);
+            ManageButton(button2, dialogue.Button2Config);
         }
 
         private void ChangeAnchors(bool isShopDialogue)
@@ -49,26 +53,18 @@ namespace Dialogue
             _rect.anchorMin = minAnchor;
         }
 
-        private void ManageButtons(UnityEvent button1Event, UnityEvent button2Event)
+        private void ManageButton(Button button, DialogueButtonConfig buttonConfig)
         {
-            if (button1Event != null)
+            if (buttonConfig != null)
             {
-                button1.gameObject.SetActive(true);
-                button1.onClick.AddListener(button1Event.Invoke);
+                button.gameObject.SetActive(true);
+                button.GetComponentInChildren<TextMeshProUGUI>().text = buttonConfig.Name;
+                button.onClick.RemoveAllListeners();
+                button.onClick.AddListener(buttonConfig.Event.Invoke);
             }
             else
             {
-                button1.gameObject.SetActive(false);
-            }
-            
-            if (button2Event != null)
-            {
-                button2.gameObject.SetActive(true);
-                button2.onClick.AddListener(button2Event.Invoke);
-            }
-            else
-            {
-                button1.gameObject.SetActive(false);
+                button.gameObject.SetActive(false);
             }
         }
     }
@@ -78,7 +74,13 @@ namespace Dialogue
         public CharacterOutfitHandler Character { get; set; }
         public string Text { get; set; }
         public bool IsShopDialogue { get; set; }
-        public UnityEvent Button1Event { get; set; }
-        public UnityEvent Button2Event { get; set; }
+        public DialogueButtonConfig Button1Config { get; set; }
+        public DialogueButtonConfig Button2Config { get; set; }
+    }
+
+    public class DialogueButtonConfig
+    {
+        public string Name {get;set;}
+        public UnityEvent Event {get;set;}
     }
 }

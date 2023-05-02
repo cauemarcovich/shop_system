@@ -168,6 +168,8 @@ namespace Character
             items = _shopItemsSets.Items.GetAllByItemType(ItemType.Pants).ToArray();
             ChooseRandomAndEquip(items);
             initialPants = _pants;
+
+            UpdateSpriteRenderers();
         }
 
         void ChooseRandomAndEquip(Item[] items)
@@ -182,23 +184,20 @@ namespace Character
         private void OnValidate()
         {
             if (_spritesAlreadyUpdatedInEditorMode) return;
-            
-            if (initialHair != null)
-            {
-                hairSpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialHair.GetFirstSprite();
-            }
 
-            if (initialBody != null)
-            {
-                bodySpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialBody.GetFirstSprite();
-            }
-
-            if (initialPants != null)
-            {
-                pantsSpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialPants.GetFirstSprite();
-            }
+            UpdateSpriteRenderers();
 
             _spritesAlreadyUpdatedInEditorMode = true;
+        }
+
+        [ContextMenu("Refresh SpriteRenderers")]
+        void RefreshSpriteRenderers() => UpdateSpriteRenderers();
+
+        private void UpdateSpriteRenderers()
+        {
+            hairSpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialHair != null ? initialHair.GetFirstSprite() : null;
+            bodySpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialBody != null ? initialBody.GetFirstSprite() : null;
+            pantsSpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialPants != null ? initialPants.GetFirstSprite() : null;
         }
     }
 }

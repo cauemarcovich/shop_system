@@ -8,6 +8,7 @@ namespace Dialogue
     public class DialogueManager : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI textMesh;
+        [SerializeField] private CharacterPreviewOutfitHandler characterPreviewOutfitHandler;
 
         [Header("Anchors")]
         [SerializeField] private float shopMinXAnchor;
@@ -27,10 +28,13 @@ namespace Dialogue
         }
 
         public void ShowDialogue(object text) => ShowDialogue((Dialogue)text);
+
         public void ShowDialogue(Dialogue dialogue)
         {
             ChangeAnchors(dialogue.IsShopDialogue);
 
+            characterPreviewOutfitHandler.SetPreviewOutfit(dialogue.Character.Hair, dialogue.Character.Body,
+                dialogue.Character.Pants);
             textMesh.text = dialogue.Text;
         }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using Scriptable;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -9,10 +10,11 @@ namespace UI
         [SerializeField] private ItemType itemType;
         [SerializeField] private UIItemContainer itemContainer;
 
-        private void Start()
+        private IEnumerator Start()
         {
             if (transform.GetSiblingIndex() == 0)
             {
+                yield return new WaitForEndOfFrame();
                 itemContainer.Refresh(itemType);
             }
         }

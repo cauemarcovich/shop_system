@@ -17,12 +17,12 @@ namespace Character
 
         [Header("SpriteLibrary References")]
         [SerializeField] private SpriteLibrary hairSpriteLibrary;
-
         [SerializeField] private SpriteLibrary bodySpriteLibrary;
         [SerializeField] private SpriteLibrary pantsSpriteLibrary;
 
         [Header("Equipped Items Set (Optional)")]
         [SerializeField] private ItemRuntimeSet equippedItemsSet;
+        [SerializeField] private ItemRuntimeSet inventory;
 
         private Item _hair;
         public Item Hair => _hair;
@@ -33,9 +33,25 @@ namespace Character
 
         private void Start()
         {
-            _hair = initialHair;
-            _body = initialBody;
-            _pants = initialPants;
+            if (initialHair != null)
+            {
+                Equip(initialHair);
+                if(inventory != null)
+                    inventory.Add(initialHair);
+            }
+            if (initialBody != null)
+            {
+                Equip(initialBody);
+                if(inventory != null)
+                    inventory.Add(initialBody);
+            }
+            if (initialPants != null)
+            {
+                Equip(initialPants);
+                if(inventory != null)
+                    inventory.Add(initialPants);
+            }
+            
             UpdateSprites();
         }
 

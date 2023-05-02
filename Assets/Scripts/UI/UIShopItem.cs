@@ -20,12 +20,14 @@ namespace UI
 
         public void Buy()
         {
+            AudioManager.Instance.PlayBuySell();
             playerCoinsVariable.Value -= Item.Price;
             EventManager.TriggerEvent(ShopEvents.BUY_ITEM, Item);
         }
 
         public void Sell()
         {
+            AudioManager.Instance.PlayBuySell();
             playerCoinsVariable.Value += Item.SellPrice;
             EventManager.TriggerEvent(ShopEvents.SELL_ITEM, Item);
         }

@@ -15,10 +15,12 @@ namespace Scriptable.Core
 
         private void OnEnable()
         {
+#if UNITY_EDITOR
             if (!UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
                 return;
-            
-            if(clearOnPlay)
+#endif
+
+            if (clearOnPlay)
                 items.Clear();
         }
 

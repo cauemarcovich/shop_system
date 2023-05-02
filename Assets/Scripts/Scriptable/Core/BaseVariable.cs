@@ -11,9 +11,11 @@ namespace Scriptable.Core
 
         private void OnEnable()
         {
+#if UNITY_EDITOR
             if (!UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
                 return;
-            
+#endif
+
             runtimeValue = initialValue;
         }
 

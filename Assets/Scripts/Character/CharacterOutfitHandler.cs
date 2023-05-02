@@ -17,11 +17,13 @@ namespace Character
 
         [Header("SpriteLibrary References")]
         [SerializeField] private SpriteLibrary hairSpriteLibrary;
+
         [SerializeField] private SpriteLibrary bodySpriteLibrary;
         [SerializeField] private SpriteLibrary pantsSpriteLibrary;
 
         [Header("Equipped Items Set (Optional)")]
         [SerializeField] private ItemRuntimeSet equippedItemsSet;
+
         [SerializeField] private ItemRuntimeSet inventory;
 
         private Item _hair;
@@ -36,7 +38,7 @@ namespace Character
         private void Start()
         {
             _spritesAlreadyUpdatedInEditorMode = false;
-            
+
             if (initialHair != null)
             {
                 Equip(initialHair);
@@ -143,6 +145,7 @@ namespace Character
 
         private ItemRuntimeSet _shopItemsSets;
 
+#if UNITY_EDITOR
         [ContextMenu("Load Random Equips")]
         void LoadRandomEquipsContextMenu()
         {
@@ -171,6 +174,7 @@ namespace Character
 
             UpdateSpriteRenderers();
         }
+#endif
 
         void ChooseRandomAndEquip(Item[] items)
         {
@@ -190,14 +194,19 @@ namespace Character
             _spritesAlreadyUpdatedInEditorMode = true;
         }
 
+#if UNITY_EDITOR
         [ContextMenu("Refresh SpriteRenderers")]
         void RefreshSpriteRenderers() => UpdateSpriteRenderers();
-
+#endif
+        
         private void UpdateSpriteRenderers()
         {
-            hairSpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialHair != null ? initialHair.GetFirstSprite() : null;
-            bodySpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialBody != null ? initialBody.GetFirstSprite() : null;
-            pantsSpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialPants != null ? initialPants.GetFirstSprite() : null;
+            hairSpriteLibrary.GetComponent<SpriteRenderer>().sprite =
+                initialHair != null ? initialHair.GetFirstSprite() : null;
+            bodySpriteLibrary.GetComponent<SpriteRenderer>().sprite =
+                initialBody != null ? initialBody.GetFirstSprite() : null;
+            pantsSpriteLibrary.GetComponent<SpriteRenderer>().sprite =
+                initialPants != null ? initialPants.GetFirstSprite() : null;
         }
     }
 }

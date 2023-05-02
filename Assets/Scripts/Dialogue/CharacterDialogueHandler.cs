@@ -26,10 +26,10 @@ namespace Dialogue
                 Text = text,
                 IsShopDialogue = false
             };
-            if (button1Event != null)
+            if (button1Event.GetPersistentEventCount() > 0)
                 dialogue.Button1Config = new DialogueButtonConfig() { Name = button1Name, Event = button1Event };
 
-            if (button1Event != null)
+            if (button2Event.GetPersistentEventCount() > 0)
                 dialogue.Button2Config = new DialogueButtonConfig() { Name = button2Name, Event = button2Event };
                     
             EventManager.TriggerEvent(CharacterEvents.DIALOGUE_OPEN, dialogue);

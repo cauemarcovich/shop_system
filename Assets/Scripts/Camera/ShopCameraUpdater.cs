@@ -6,8 +6,9 @@ namespace Camera
 {
     public class ShopCameraUpdater : MonoBehaviour
     {
-        [SerializeField] private CinemachineVirtualCamera playerCam;
         [SerializeField] private CinemachineVirtualCamera shopCam;
+        [SerializeField] private int disablePriority;
+        [SerializeField] private int enablePriority;
     
         private void OnEnable()
         {
@@ -19,12 +20,12 @@ namespace Camera
 
         private void ChangeToPlayerCamera()
         {
-            shopCam.Priority = playerCam.Priority - 1;
+            shopCam.Priority = disablePriority;
         }
     
         private void ChangeToShopCamera()
         {
-            shopCam.Priority = playerCam.Priority + 1;
+            shopCam.Priority = enablePriority;
         }
     }
 }

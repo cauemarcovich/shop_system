@@ -8,10 +8,9 @@ namespace Dialogue
     public class DialogueManager : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI textMesh;
-    
+
         [Header("Anchors")]
-        [SerializeField] private Vector2 normalDialogueAnchors;
-        [SerializeField] private Vector2 shopDialogueAnchors;
+        [SerializeField] private float shopMinXAnchor;
 
         private RectTransform _rect;
 
@@ -38,13 +37,8 @@ namespace Dialogue
         private void ChangeAnchors(bool isShopDialogue)
         {
             var minAnchor = _rect.anchorMin;
-            var maxAnchor = _rect.anchorMax;
-        
-            minAnchor.x = isShopDialogue ? shopDialogueAnchors.x : normalDialogueAnchors.x;
-            maxAnchor.x = isShopDialogue ? shopDialogueAnchors.y : normalDialogueAnchors.y;
-
+            minAnchor.x = isShopDialogue ? shopMinXAnchor : 0f;
             _rect.anchorMin = minAnchor;
-            _rect.anchorMax = maxAnchor;
         }
     }
 

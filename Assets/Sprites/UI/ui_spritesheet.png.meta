@@ -2241,13 +2241,13 @@ TextureImporter:
       name: ui_spritesheet_101
       rect:
         serializedVersion: 2
-        x: 160
+        x: 153
         y: 105
-        width: 23
+        width: 30
         height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 7, z: 7, w: 7}
+      border: {x: 7, y: 7, z: 7, w: 7}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -3171,7 +3171,7 @@ TextureImporter:
         height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 9, y: 7, z: 5, w: 5}
+      border: {x: 9, y: 20, z: 5, w: 5}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -6919,8 +6919,8 @@ TextureImporter:
       ui_spritesheet_218: -374603861
       ui_spritesheet_64: -343250310
       ui_spritesheet_11: -1030978101
-      ui_spritesheet_143: 664994256
       ui_spritesheet_131: 1547532223
+      ui_spritesheet_143: 664994256
       ui_spritesheet_83: -1108859593
       ui_spritesheet_13: 142965904
       ui_spritesheet_124: 1781187705

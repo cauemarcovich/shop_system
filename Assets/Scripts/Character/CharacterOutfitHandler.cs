@@ -31,27 +31,33 @@ namespace Character
         private Item _pants;
         public Item Pants => _pants;
 
+        private bool _spritesAlreadyUpdatedInEditorMode;
+
         private void Start()
         {
+            _spritesAlreadyUpdatedInEditorMode = false;
+            
             if (initialHair != null)
             {
                 Equip(initialHair);
-                if(inventory != null)
+                if (inventory != null)
                     inventory.Add(initialHair);
             }
+
             if (initialBody != null)
             {
                 Equip(initialBody);
-                if(inventory != null)
+                if (inventory != null)
                     inventory.Add(initialBody);
             }
+
             if (initialPants != null)
             {
                 Equip(initialPants);
-                if(inventory != null)
+                if (inventory != null)
                     inventory.Add(initialPants);
             }
-            
+
             UpdateSprites();
         }
 
@@ -171,6 +177,28 @@ namespace Character
                 var item = items[Random.Range(0, items.Count())];
                 Equip(item);
             }
+        }
+
+        private void OnValidate()
+        {
+            if (_spritesAlreadyUpdatedInEditorMode) return;
+            
+            if (initialHair != null)
+            {
+                hairSpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialHair.GetFirstSprite();
+            }
+
+            if (initialBody != null)
+            {
+                bodySpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialBody.GetFirstSprite();
+            }
+
+            if (initialPants != null)
+            {
+                pantsSpriteLibrary.GetComponent<SpriteRenderer>().sprite = initialPants.GetFirstSprite();
+            }
+
+            _spritesAlreadyUpdatedInEditorMode = true;
         }
     }
 }

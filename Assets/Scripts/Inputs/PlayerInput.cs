@@ -14,6 +14,7 @@ namespace Inputs
         void Update()
         {
             CacheMoveInput();
+            OpenInventory();
             HandleInteraction();
             ClosePanel();
         }
@@ -27,6 +28,16 @@ namespace Inputs
         {
             _movement.x = Input.GetAxis("Horizontal");
             _movement.y = Input.GetAxis("Vertical");
+        }
+
+        private void OpenInventory()
+        {
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                EventManager.TriggerEvent(panelTracker.IsInventoryOpen
+                    ? CharacterEvents.INVENTORY_CLOSE
+                    : CharacterEvents.INVENTORY_OPEN);
+            }
         }
 
         public void HandleInteraction()

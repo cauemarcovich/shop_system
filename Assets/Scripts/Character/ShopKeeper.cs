@@ -24,12 +24,16 @@ namespace Character
         {
             EventManager.StartListening(ShopEvents.BUY_ITEM, SpeakBuyQuote);
             EventManager.StartListening(ShopEvents.SELL_ITEM, SpeakSellQuote);
+            EventManager.StartListening(ShopEvents.CLOSE_BUY_SHOP, CancelReset);
+            EventManager.StartListening(ShopEvents.CLOSE_SELL_SHOP, CancelReset);
         }
         
         private void OnDisable()
         {
             EventManager.StopListening(ShopEvents.BUY_ITEM, SpeakBuyQuote);
             EventManager.StopListening(ShopEvents.SELL_ITEM, SpeakSellQuote);
+            EventManager.StartListening(ShopEvents.CLOSE_BUY_SHOP, CancelReset);
+            EventManager.StartListening(ShopEvents.CLOSE_SELL_SHOP, CancelReset);
         }
 
         public void ShowBuyStore()
@@ -56,9 +60,8 @@ namespace Character
             var dialogue = BuildShopDialogue(quote);
             
             EventManager.TriggerEvent(CharacterEvents.DIALOGUE_OPEN, dialogue);
-            
-            if(_resetCoroutine != null)
-                StopCoroutine(_resetCoroutine);
+
+            CancelReset();
             _resetCoroutine = StartCoroutine(ResetQuote(buyStandardQuote));
         }
         
@@ -71,9 +74,14 @@ namespace Character
             
             EventManager.TriggerEvent(CharacterEvents.DIALOGUE_OPEN, dialogue);
 
+            CancelReset();
+            _resetCoroutine = StartCoroutine(ResetQuote(sellStandardQuote));
+        }
+
+        private void CancelReset()
+        {
             if(_resetCoroutine != null)
                 StopCoroutine(_resetCoroutine);
-            _resetCoroutine = StartCoroutine(ResetQuote(sellStandardQuote));
         }
 
         private IEnumerator ResetQuote(string quoteToReset)

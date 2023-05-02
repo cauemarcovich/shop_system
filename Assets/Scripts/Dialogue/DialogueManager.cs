@@ -32,18 +32,18 @@ namespace Dialogue
             EventManager.StartListening(CharacterEvents.DIALOGUE_OPEN, ShowDialogue);
         }
 
-        public void ShowDialogue(object text) => ShowDialogue((Dialogue)text);
+        public void ShowDialogue(object text) => ShowDialogue((DialogueData)text);
 
-        public void ShowDialogue(Dialogue dialogue)
+        public void ShowDialogue(DialogueData dialogueData)
         {
-            ChangeAnchors(dialogue.IsShopDialogue);
+            ChangeAnchors(dialogueData.IsShopDialogue);
 
-            characterPreviewOutfitHandler.SetPreviewOutfit(dialogue.Character.Hair, dialogue.Character.Body,
-                dialogue.Character.Pants);
-            textMesh.text = dialogue.Text;
+            characterPreviewOutfitHandler.SetPreviewOutfit(dialogueData.CharacterOutfitHandler.Hair, dialogueData.CharacterOutfitHandler.Body,
+                dialogueData.CharacterOutfitHandler.Pants);
+            textMesh.text = dialogueData.Text;
 
-            ManageButton(button1, dialogue.Button1Config);
-            ManageButton(button2, dialogue.Button2Config);
+            ManageButton(button1, dialogueData.Button1Config);
+            ManageButton(button2, dialogueData.Button2Config);
         }
 
         private void ChangeAnchors(bool isShopDialogue)
@@ -69,9 +69,9 @@ namespace Dialogue
         }
     }
 
-    public class Dialogue
+    public class DialogueData
     {
-        public CharacterOutfitHandler Character { get; set; }
+        public CharacterOutfitHandler CharacterOutfitHandler { get; set; }
         public string Text { get; set; }
         public bool IsShopDialogue { get; set; }
         public DialogueButtonConfig Button1Config { get; set; }

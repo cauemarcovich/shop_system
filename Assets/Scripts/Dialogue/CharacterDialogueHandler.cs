@@ -20,9 +20,9 @@ namespace Dialogue
 
         public void ShowDialog()
         {
-            var dialogue = new Dialogue()
+            var dialogue = new DialogueData()
             {
-                Character = outfitHandler,
+                CharacterOutfitHandler = outfitHandler,
                 Text = text,
                 IsShopDialogue = false
             };

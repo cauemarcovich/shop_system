@@ -2,13 +2,18 @@ using Character;
 using Events;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Dialogue
 {
     public class DialogueManager : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI textMesh;
         [SerializeField] private CharacterPreviewOutfitHandler characterPreviewOutfitHandler;
+        [SerializeField] private TextMeshProUGUI textMesh;
+
+        [SerializeField] private Button button1;
+        [SerializeField] private Button button2;
 
         [Header("Anchors")]
         [SerializeField] private float shopMinXAnchor;
@@ -27,15 +32,18 @@ namespace Dialogue
             EventManager.StartListening(CharacterEvents.DIALOGUE_OPEN, ShowDialogue);
         }
 
-        public void ShowDialogue(object text) => ShowDialogue((Dialogue)text);
+        public void ShowDialogue(object text) => ShowDialogue((DialogueData)text);
 
-        public void ShowDialogue(Dialogue dialogue)
+        public void ShowDialogue(DialogueData dialogueData)
         {
-            ChangeAnchors(dialogue.IsShopDialogue);
+            ChangeAnchors(dialogueData.IsShopDialogue);
 
-            characterPreviewOutfitHandler.SetPreviewOutfit(dialogue.Character.Hair, dialogue.Character.Body,
-                dialogue.Character.Pants);
-            textMesh.text = dialogue.Text;
+            characterPreviewOutfitHandler.SetPreviewOutfit(dialogueData.CharacterOutfitHandler.Hair, dialogueData.CharacterOutfitHandler.Body,
+                dialogueData.CharacterOutfitHandler.Pants);
+            textMesh.text = dialogueData.Text;
+
+            ManageButton(button1, dialogueData.Button1Config);
+            ManageButton(button2, dialogueData.Button2Config);
         }
 
         private void ChangeAnchors(bool isShopDialogue)
@@ -44,12 +52,35 @@ namespace Dialogue
             minAnchor.x = isShopDialogue ? shopMinXAnchor : 0f;
             _rect.anchorMin = minAnchor;
         }
+
+        private void ManageButton(Button button, DialogueButtonConfig buttonConfig)
+        {
+            if (buttonConfig != null)
+            {
+                button.gameObject.SetActive(true);
+                button.GetComponentInChildren<TextMeshProUGUI>().text = buttonConfig.Name;
+                button.onClick.RemoveAllListeners();
+                button.onClick.AddListener(buttonConfig.Event.Invoke);
+            }
+            else
+            {
+                button.gameObject.SetActive(false);
+            }
+        }
     }
 
-    public class Dialogue
+    public class DialogueData
     {
-        public CharacterOutfitHandler Character { get; set; }
+        public CharacterOutfitHandler CharacterOutfitHandler { get; set; }
         public string Text { get; set; }
         public bool IsShopDialogue { get; set; }
+        public DialogueButtonConfig Button1Config { get; set; }
+        public DialogueButtonConfig Button2Config { get; set; }
+    }
+
+    public class DialogueButtonConfig
+    {
+        public string Name {get;set;}
+        public UnityEvent Event {get;set;}
     }
 }

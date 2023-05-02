@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &839628555868328984
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371605386236086, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306371605386236090, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: m_Name
+      value: ShopKeeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: text
+      value: Hello! Do you want to buy or sell?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button1Name
+      value: Buy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button2Name
+      value: Sell
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button1Event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button2Event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button1Event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button2Event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button1Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3423457636548898073}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button2Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3423457636548898073}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button1Event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button2Event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button1Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowBuyStore
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button2Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowSellStore
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button1Event.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Character.ShopKeeper, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button2Event.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Character.ShopKeeper, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button1Event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525026160808667176, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+      propertyPath: button2Event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+--- !u!114 &1774918076608767911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1371120889090880447, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+  m_PrefabInstance: {fileID: 839628555868328984}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149f33e33c4490e47a0020b1380ce741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2757437500668658850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3306371605386236090, guid: c39781ba41e6e0948967949c6a5659b2, type: 3}
+  m_PrefabInstance: {fileID: 839628555868328984}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3423457636548898073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2757437500668658850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5192a0438e5d4d04781fa082e939aa77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeResetQuote: 3
+  buyStandardQuote: What do you want to buy?
+  sellStandardQuote: What do you want to sell?
+  buyQuotes:
+  - Thank you!
+  - A fine choice!
+  - Enjoy!
+  sellQuotes:
+  - Very nice.
+  - Excellent.
+  - Wonderful!
+  outfitHandler: {fileID: 1774918076608767911}
